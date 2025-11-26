@@ -1,0 +1,437 @@
+/* src/app/app.component.css */
+
+body {
+  margin: 0;
+}
+
+.page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding-bottom: 3rem;
+}
+
+/* Top bar */
+
+.top-bar {
+  background: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+  padding: 0.75rem 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-ball {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff 10%, #ff1c1c 55%, #c40b0b 100%);
+  border: 2px solid #222;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/* Search bar */
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem 0.5rem;
+  gap: 0.5rem;
+}
+
+.search-section input {
+  width: 60%;
+  max-width: 540px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.search-btn {
+  padding: 0.7rem 1.7rem;
+  border-radius: 999px;
+  border: none;
+  background: #e3350d;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Toolbar */
+
+.toolbar {
+  max-width: 1100px;
+  margin: 0 auto 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.surprise-btn {
+  background: #2a9fd6;
+  color: #fff;
+  border: none;
+  padding: 0.55rem 1.3rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.sort-control select {
+  padding: 0.35rem 0.6rem;
+}
+
+/* Errors / loading */
+
+.error {
+  color: #d63031;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Grid */
+
+.grid-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+}
+
+.grid-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.grid-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.grid-card.selected {
+  box-shadow: 0 0 0 3px #ffcb05;
+}
+
+.grid-image-wrapper {
+  background: #f6f6f6;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.grid-image-wrapper img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.grid-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.grid-id {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.grid-name {
+  font-weight: 600;
+}
+
+.grid-types {
+  margin-top: 0.1rem;
+}
+
+/* Chips */
+
+.type-chip {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: #4dad5b;
+  color: #fff;
+  font-size: 0.78rem;
+  margin-right: 0.25rem;
+}
+
+/* Detail card (reusing your previous style but under list) */
+
+.detail-section {
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.pokemon-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.pokemon-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.pokemon-header img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.pokemon-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.pokemon-header h2 span {
+  color: #777;
+  font-size: 1rem;
+  margin-left: 0.4rem;
+}
+
+.from-cache {
+  font-size: 0.85rem;
+  color: #0984e3;
+}
+
+.tags {
+  margin-bottom: 1rem;
+}
+
+.sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.section h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section li {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.stat-name {
+  font-weight: 500;
+}
+
+.stat-value {
+  float: right;
+}
+/* Detail layout like official Pokémon detail page */
+
+.detail-section {
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.detail-wrapper {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.3fr) minmax(260px, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-bottom: 1.5rem;
+}
+
+.detail-image {
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.detail-image img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+}
+
+.detail-info-card {
+  background: #1b95d3;
+  color: #fff;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detail-name {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.detail-id {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-left: 0.4rem;
+}
+
+.detail-meta {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.detail-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.info-label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+.info-value {
+  font-weight: 600;
+}
+
+.detail-lower {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+  gap: 1.5rem;
+}
+
+/* Stats section */
+
+.detail-stats {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+}
+
+.detail-stats h3,
+.detail-types h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 40px;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.stat-name {
+  font-weight: 500;
+}
+
+.stat-bar-wrapper {
+  background: #e0e0e0;
+  border-radius: 999px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  background: #28a745;
+}
+
+.stat-value {
+  text-align: right;
+}
+
+/* Type / weaknesses */
+
+.detail-types {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+}
+
+.type-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.type-chip.big {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+.weak-chip {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: #d2a10a;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .detail-wrapper,
+  .detail-lower {
+    grid-template-columns: 1fr;
+  }
+}
